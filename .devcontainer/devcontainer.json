@@ -1,0 +1,12 @@
+{
+	"name": "codespaces",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	},
+	"dockerComposeFile": "compose.yaml",
+	"service": "dev"
+}

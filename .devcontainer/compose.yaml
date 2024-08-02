@@ -1,0 +1,21 @@
+services:
+  dev:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    privileged: true
+    volumes:
+      - ./ext:/usr/src/php/ext/extension:cached
+      - ./:/work:cached
+    tty: true
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_USER: testing
+      MYSQL_PASSWORD: testing
