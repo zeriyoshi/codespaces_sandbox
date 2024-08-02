@@ -17,5 +17,7 @@ services:
   mysql:
     image: mysql:8.0
     environment:
-      MYSQL_USER: testing
-      MYSQL_PASSWORD: testing
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test

@@ -1,0 +1,16 @@
+{
+	"name": "local",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	},
+	"dockerComposeFile": "./../compose.yaml",
+	"service": "dev",
+	"mounts": [
+		{"type": "bind", "source": "./../", "target": "/work"}
+	],
+	"workspaceFolder": "/work"
+}
